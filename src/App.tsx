@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { OverviewPage } from './pages/OverviewPage';
+import { ControlTowerPage } from './pages/ControlTowerPage';
 import { PlaceholderPage } from './pages/PlaceholderPage';
 
 export const App: React.FC = () => {
@@ -13,17 +14,8 @@ export const App: React.FC = () => {
         {/* Page 1: Executive Overview */}
         <Route path="/overview" element={<OverviewPage />} />
 
-        {/* Page 2: Minimal Placeholder ready for MCP integration */}
-        <Route
-          path="/control-tower"
-          element={
-            <PlaceholderPage
-              title="Supply Chain Control Tower"
-              subtitle="End-to-end multi-tier network visibility, incident tracking, and active shipments monitoring."
-              description="Real-time multi-echelon network topology, route maps, bottleneck tracing, and active shipment dispatch telemetry."
-            />
-          }
-        />
+        {/* Page 2: Supply Chain Control Tower */}
+        <Route path="/control-tower" element={<ControlTowerPage />} />
 
         {/* Page 3: Minimal Placeholder ready for MCP integration */}
         <Route
