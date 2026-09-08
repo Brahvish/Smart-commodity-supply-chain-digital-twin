@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { OverviewPage } from './pages/OverviewPage';
 import { ControlTowerPage } from './pages/ControlTowerPage';
+import { DigitalTwinPage } from './pages/DigitalTwinPage';
 import { PlaceholderPage } from './pages/PlaceholderPage';
 
 export const App: React.FC = () => {
@@ -17,17 +18,8 @@ export const App: React.FC = () => {
         {/* Page 2: Supply Chain Control Tower */}
         <Route path="/control-tower" element={<ControlTowerPage />} />
 
-        {/* Page 3: Minimal Placeholder ready for MCP integration */}
-        <Route
-          path="/digital-twin"
-          element={
-            <PlaceholderPage
-              title="Digital Twin Simulation"
-              subtitle="Supply chain simulation, what-if scenario testing, and impact analysis."
-              description="Dynamic simulation sandbox to model demand surges, supplier lead time disruptions, and inventory buffers."
-            />
-          }
-        />
+        {/* Page 3: Digital Twin Workspace */}
+        <Route path="/digital-twin" element={<DigitalTwinPage />} />
 
         {/* Page 4: Minimal Placeholder ready for MCP integration */}
         <Route
